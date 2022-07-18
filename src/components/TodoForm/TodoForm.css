@@ -1,0 +1,84 @@
+@import '../../colors.css';
+
+#form-todo {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    row-gap: 20px;
+    background-color: var(--color-white);
+    padding: 50px;
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 100px;
+    animation: in 250ms normal;
+}
+
+#form-todo label {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 4px var(--color-primary);
+}
+
+#form-input {
+    resize: none;
+    border-color: var(--color-black);
+    border-radius: 10px;
+    border-style: solid;
+    padding: 5px;
+
+}
+
+#form-input:focus {
+    outline: none;
+}
+
+#form-input:hover {
+    border-color: var(--color-black);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 0.8em;
+
+    padding: 10px 0;
+    width: 100px;
+    border: 1px solid var(--color-white);
+    border-radius: 5px;
+
+    transition: 250ms ease-in
+}
+
+.form-buttons button:last-child {
+    background-color: var(--color-green);
+}
+
+.form-buttons button:hover {
+    filter: contrast(1.5);
+}
+
+@keyframes in {
+    from {
+        transform: translateX(-200%);
+    }
+    
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #form-todo {
+        min-width: inherit;
+        width: 80%;
+        padding: 50px 30px;
+    }
+}

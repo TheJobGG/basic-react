@@ -1,0 +1,20 @@
+@import '../../colors.css';
+
+#TodoList {
+    padding: 10px 30px;
+    background-color: var(--color-primary);
+}
+
+.List {
+    list-style: none;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media screen and (max-width: 1060px) {
+    #TodoList {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

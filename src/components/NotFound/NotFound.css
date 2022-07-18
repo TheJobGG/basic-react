@@ -1,0 +1,18 @@
+.notFound{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-white);
+    padding: 40px 0;
+  }
+
+@media screen and (max-width: 600px){
+    .notFound{
+        font-size: 3em;
+        
+    }
+    
+}

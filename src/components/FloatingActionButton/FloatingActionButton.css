@@ -1,0 +1,40 @@
+@import '../../colors.css';
+
+#todo-button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding-bottom: 6px;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-accent-second);
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+
+    font-size: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transform: rotate(0deg);
+    transition: 250ms ease-in;
+}
+
+#todo-button[data-open-modal=true] {
+    transform: rotate(135deg);
+    transition: 250ms ease-out;
+}
+
+@keyframes out {
+    from {
+        transform: translateY(0px);
+    }
+    
+    to {
+        transform: translateY(500px);
+    }
+}

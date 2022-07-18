@@ -1,0 +1,57 @@
+@import '../../colors.css';
+
+#new-element-message {
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+#arrow {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 50px;
+    height: 5px;
+    transform: rotate(0deg);
+    bottom: 47px;
+    right: 100px;
+    animation: arrow 1.5s ease-out infinite;
+}
+
+#arrow::before {
+    content: "";
+    background-color: var(--color-white);
+    width: 30px;
+    height: 5px;
+    transform: rotate(45deg);
+
+    position: absolute;
+    right: -5px;
+    top: -9px;
+}
+
+#arrow::after {
+    content: "";
+    background-color: var(--color-white);
+    width: 30px;
+    height: 5px;
+    transform: rotate(135deg);
+
+    position: absolute;
+    right: -5px;
+    top: 9px;
+}
+
+@keyframes arrow {
+    0% {
+        right: 150px;
+    }
+
+    50% {
+        right: 100px;
+    }
+    
+    100% {
+        right: 150px;
+    }
+}

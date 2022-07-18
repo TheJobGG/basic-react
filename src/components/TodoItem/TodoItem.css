@@ -1,0 +1,75 @@
+@import '../../colors.css';
+
+.list-item{
+    position: relative;
+}
+
+.todo-item{
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--color-accent-second);
+    color: var(--color-black);
+    padding: 5px 1em;
+    margin: 15px 0;
+    transition: 250ms background-color ease-out;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.todo-item:hover, .delete:hover + .todo-item{
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.text{
+    padding-left: 10px;
+    overflow-wrap: break-word;
+}
+
+.check{
+    padding: 4px;
+    font-size: 1.3em;
+    font-weight: 800;
+    color: transparent;
+}
+
+.check-completed{
+    color: var(--color-black);
+}
+.todo-item:hover .check-completed{
+    color: var(--color-white);
+}
+
+.task-completed{
+    text-decoration: line-through wavy var(--color-black);
+    text-decoration-thickness: 0.15em;
+}
+
+.todo-item:hover .task-completed{
+    text-decoration: line-through wavy var(--color-white);
+
+}
+
+.text-check, .todo-item{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.delete{
+    position: absolute;
+    right: 10px;
+    top: -21px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 4px;
+    transition: 250ms color ease;
+    cursor: pointer;
+}
+
+.delete:hover{
+    color: var(--color-red);
+}
